@@ -11,9 +11,6 @@
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
 }
 @font-face {
 	font-family: 'Atkinson';
@@ -34,7 +31,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background-color: white;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -151,4 +148,45 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent: #4a90e2; /* Change accent color for dark theme */
+        --accent-dark: #1a73e8; /* Darker accent color */
+        --black: 255, 255, 255; /* Change black to white */
+        --gray: 200, 200, 200; /* Light gray for text */
+        --gray-light: 20, 20, 20; /* Darker light gray */
+        --gray-dark: 255, 255, 255; /* White for dark theme */
+        --box-shadow: 0 2px 6px rgba(var(--gray), 30%), 0 5px 12px rgba(var(--gray), 20%),
+            0 10px 18px rgba(var(--gray), 14%);
+    }
+    
+    body {
+        background-color: black;
+        color: rgb(var(--gray-dark));
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: rgb(var(--black));
+    }
+
+    a {
+        color: var(--accent);
+    }
+
+    a:hover {
+        color: var(--accent-dark);
+    }
+
+    blockquote {
+        border-left: 4px solid var(--accent);
+    }
+
+    hr {
+        border-top: 1px solid rgb(var(--gray-light));
+    }
+
+    /* Additional styles for dark theme can be added here */
 }

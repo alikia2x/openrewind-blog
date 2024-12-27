@@ -1,22 +1,23 @@
----
-import { Image } from 'astro:assets';
----
-
-<div class="mx-auto max-w-2xl mt-12">
-    <h1
-        class="text-3xl text-center font-bold tracking-tight text-gray-900 sm:text-4xl"
-    >
-        <a href="/">
-            <Image src="/logo.png" alt="Mastodon" class="mx-auto h-40" />
-        </a>
-    </h1>
-    <p class="mt-2 text-center text-lg leading-8 text-gray-800">
+<div class="mx-auto max-w-2xl mt-12 flex flex-col items-center">
+    <div>
+        <picture>
+            <source media="(prefers-color-scheme: light)" srcset="/img/logo.png" />
+            <source media="(prefers-color-scheme: dark)" srcset="/img/logo-dark.png" />
+            <img src="/img/logo.png" alt="OpenRewind" class="h-52" />
+        </picture>
+    </div>
+    <!-- <Image src="/logo.png" alt="OpenRewind" class="mx-auto" height="224" width="560" /> -->
+    <p class="mt-2 mb-0.5 text-center text-lg leading-8 text-gray-700 dark:text-gray-200">
         Updates from the OpenRewind developers.
     </p>
-    <p class="mt-1 text-center text-sm text-gray-500">
-        Note: Tips on how to use OpenRewind are not included here.<br/>
+    <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+        Note: Tips on how to use OpenRewind are not included here.<br />
         Please go to
         <a href="">docs.openrewind.a2x.pub</a>
         instead.
     </p>
+</div>
+<div
+    class="relative left-1/2 -translate-x-1/2 w-[70vw] max-w-[64rem] h-0.5 bg-slate-400 dark:bg-gray-600 rounded-sm mb-8 mt-12"
+>
 </div>
