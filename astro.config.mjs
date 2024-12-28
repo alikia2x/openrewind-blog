@@ -7,6 +7,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://example.com',
+    site: 'https://blog-openrewind.a2x.pub',
     integrations: [mdx(), sitemap(), tailwind()],
 });

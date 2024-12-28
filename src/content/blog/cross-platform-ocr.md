@@ -7,8 +7,8 @@ heroImage: '/img/Cross Platform OCR.jpg'
 
 ## macOS
 
-We first focused on macOS, which was our first target during development and is also the target for [rewind.ai](https://rewind.ai).
+macOS was our initial focus during development, as it's the primary target for [rewind.ai](https://rewind.ai).
 
-Fortunately, the [VisionKit](https://developer.apple.com/documentation/visionkit) provided by macOS is very powerful and sufficient for our use.
+Leveraging the power of Apple's [VisionKit](https://developer.apple.com/documentation/visionkit) framework was a natural choice for our OCR needs. 
 
-Therefore, we looked for a wrapper for VisionKit, a command line utility: [ocrit](https://github.com/insidegui/ocrit/).
+To streamline integration, we opted for a command-line utility that provides a wrapper around VisionKit: [ocrit](https://github.com/insidegui/ocrit/). This approach simplified the process and allowed us to efficiently extract text from images within our macOS environment.
