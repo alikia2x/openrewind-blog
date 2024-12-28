@@ -1,12 +1,11 @@
 ---
-import HeaderLink from './HeaderLink.astro';
 import SocialLinks from "./SocialLinks.astro";
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="bg-transparent backdrop-blur-lg fixed w-full h-16">
+<header class="bg-[rgba(231,235,240,.8)] dark:bg-[rgba(23,23,23,.6)] backdrop-blur-lg fixed w-full h-16">
 	<nav class="h-full w-full">
-		<h2 class="text-3xl m-0"><a href="/">{SITE_TITLE}</a></h2>
+		<h2 class="text-3xl m-0 dark:text-white"><a href="/">{SITE_TITLE}</a></h2>
 		<SocialLinks class="my-2 mr-2 hidden md:inline-block"/>
 	</nav>
 </header>
